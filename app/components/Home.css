@@ -1,14 +1,11 @@
-.container {
-  position: absolute;
-  top: 30%;
-  left: 10px;
-  text-align: center;
-}
-
-.container h2 {
-  font-size: 5rem;
-}
-
-.container a {
-  font-size: 1.4rem;
+.home {
+  background-color: #566473;
+  width: 100%;
+  display: flex;
+  height: auto;
+  padding: 15px;
+  padding-top: 5px;
+  border-radius: 10px;
+  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+  margin-left: 20px;
 }
