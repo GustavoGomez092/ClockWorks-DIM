@@ -33,6 +33,7 @@ if (
   process.env.NODE_ENV === 'development' ||
   process.env.DEBUG_PROD === 'true'
 ) {
+  // disable dev tools
   require('electron-debug')();
 }
 
@@ -61,6 +62,9 @@ const createWindow = async () => {
     frame: false,
     transparent: true,
     hasShadow: false,
+    maximizable: false,
+    resizable: false,
+    closable: false,
     titleBarStyle: 'hidden',
     webPreferences:
       process.env.NODE_ENV === 'development' || process.env.E2E_BUILD === 'true'
@@ -73,7 +77,8 @@ const createWindow = async () => {
   });
 
   mainWindow.loadURL(`file://${__dirname}/app.html`);
-
+  mainWindow.setResizable(false)
+  mainWindow.setFullScreenable(false)
   // @TODO: Use 'ready-to-show' event
   //        https://github.com/electron/electron/blob/master/docs/api/browser-window.md#using-ready-to-show-event
   mainWindow.webContents.on('did-finish-load', () => {
