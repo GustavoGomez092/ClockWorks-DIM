@@ -88,12 +88,16 @@ select {
 /* ---------------------- GLOBAL CSS  ---------------------- */
 
 body {
-  color: white;
+  color: #98adb9;
   font-family: 'Oswald', sans-serif;
   overflow: hidden;
-  height: 200px;
-  width: 600px;
+  height: auto;
+  width: 100%;
   display: flex;
+}
+
+::placeholder {
+  color:#98adb9;
 }
 
 #root {
@@ -104,6 +108,10 @@ body {
 
 .draggable {
   -webkit-app-region: drag;
+  -webkit-user-select: none;
+}
+
+.unselectable {
   -webkit-user-select: none;
 }
 

@@ -1,0 +1,33 @@
+.textInput {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  flex: 1;
+  flex-direction: column;
+  position: relative;
+}
+
+.input {
+  width: 95%;
+  padding: 10px;
+  border-radius: 4px;
+  background: #ECF0F3;
+  box-shadow: inset 5px 5px 10px #cdd1d3,
+              inset -5px -5px 10px #ffffff;
+  border: none;
+  color: #98adb9;
+  transition: box-shadow 500ms;
+}
+
+.input:focus {
+  outline: none;
+  box-shadow: inset 3px 3px 3px #cdd1d3,
+  inset -5px -5px 10px #ffffff;
+}
+
+.error {
+  color: #ff8c8c;
+  font-size: 16px;
+  bottom: -30px;
+  position: absolute;
+}

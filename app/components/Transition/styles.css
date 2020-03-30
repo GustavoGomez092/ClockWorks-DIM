@@ -1,0 +1,28 @@
+.animatedTransition {
+  display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translate(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0px);
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+    transform: translate(0px);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-10px);
+  }
+}

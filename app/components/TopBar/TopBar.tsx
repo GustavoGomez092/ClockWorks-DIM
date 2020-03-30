@@ -6,8 +6,8 @@ export default function TopBar() {
   return (
     <div className={styles.topBar}>
       <i className="fas fa-bars fa-lg draggable"></i>
-      <p>Welcome user</p>
-      <i className="fas fa-minus fa-lg" onClick={()=> remote?.BrowserWindow?.getFocusedWindow()?.minimize()}></i>
+      <p className='unselectable'>Welcome to DIM</p>
+      <i className="fas fa-minus fa-lg unselectable" onClick={()=> remote?.BrowserWindow?.getFocusedWindow()?.minimize()}></i>
     </div>
   )
 }

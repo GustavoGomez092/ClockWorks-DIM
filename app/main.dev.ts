@@ -70,10 +70,12 @@ const createWindow = async () => {
     webPreferences:
       process.env.NODE_ENV === 'development' || process.env.E2E_BUILD === 'true'
         ? {
-            nodeIntegration: true
+            nodeIntegration: true,
+            nativeWindowOpen: true
           }
         : {
-            preload: path.join(__dirname, 'dist/renderer.prod.js')
+            preload: path.join(__dirname, 'dist/renderer.prod.js'),
+            nativeWindowOpen: true
           }
   });
 
